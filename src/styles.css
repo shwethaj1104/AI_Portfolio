@@ -9252,7 +9252,8 @@ html[data-palette="royal-white"] .theme-orbit .hero-bottom { background: #1d3348
 }
 
 /* Steel blue blends into the original Midnight navy. */
-.theme-orbit .button.primary {
+.theme-orbit .button.primary,
+.theme-orbit .site-header .header-contact {
   background: linear-gradient(120deg, var(--primary-brand, #41698f), #1d3348);
   border-color: #41698f;
   color: #ffffff;

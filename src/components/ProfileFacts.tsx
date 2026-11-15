@@ -1,4 +1,4 @@
-import { BriefcaseBusiness, CalendarDays, Mail, Phone } from "lucide-react";
+import { BriefcaseBusiness, CalendarDays, Linkedin, Mail, Phone } from "lucide-react";
 import { sitecore } from "../data/sitecore";
 
 export function ProfileFacts() {
@@ -39,6 +39,14 @@ export function ProfileFacts() {
         <a href={`tel:${sitecore.profile.phone.replace(/[^+\d]/g, "")}`}>
           <Phone size={17} />
           <span>{sitecore.profile.phone}</span>
+        </a>
+        <a
+          href={sitecore.profile.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Linkedin size={17} />
+          <span>LinkedIn</span>
         </a>
       </div>
     </div>

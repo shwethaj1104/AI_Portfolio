@@ -9041,7 +9041,26 @@ html {
 .rag-visual .document-stack > div:nth-child(3) { left: 1.1em; top: .8em; padding: 1.2em .8em; }
 .rag-visual .document-stack i { height: .2em; margin-bottom: .7em; }
 .rag-visual .flow-dots { min-width: 0; overflow: hidden; white-space: nowrap; text-align: center; font-size: 1.8em; }
-.rag-visual .knowledge-core { font-size: 7.5em; text-align: center; }
+.rag-visual .knowledge-core {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  justify-self: center;
+  font-size: 7.5em;
+  color: var(--art-color, currentColor);
+}
+.knowledge-core > i {
+  position: absolute;
+  left: 0;
+  top: 44%;
+  width: 100%;
+  height: 12%;
+  border-radius: 999px;
+  background: currentColor;
+}
+.knowledge-core > i:nth-child(2) { transform: rotate(45deg); }
+.knowledge-core > i:nth-child(3) { transform: rotate(90deg); }
+.knowledge-core > i:nth-child(4) { transform: rotate(135deg); }
 .rag-visual .answer-lines { width: 4em; }
 .rag-visual .answer-lines > i { height: .3em; margin: .8em 0; }
 

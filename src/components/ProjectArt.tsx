@@ -42,7 +42,12 @@ export function ProjectArt({
             <i />
             <i />
           </div>
-          <div className="knowledge-core">✳</div>
+          <div className="knowledge-core" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+            <i />
+          </div>
           <div className="flow-dots" aria-hidden="true">
             <i />
             <i />

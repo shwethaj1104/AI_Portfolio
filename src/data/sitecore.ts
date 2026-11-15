@@ -100,22 +100,32 @@ export const sitecore = {
   },
   skills: [
     {
+      id: "languages",
+      label: "Languages",
+      summary:
+        "Different layers call for different tools. A language is a way to express a system clearly.",
+      items: ["Python", "TypeScript", "JavaScript (ES6+)"],
+      evidence: {
+        title: "Across the full stack.",
+        detail:
+          "A toolkit spanning typed web interfaces, backend services, and applied-AI development. Different parts of the system call for different ways of expressing intent.",
+        href: "#experience",
+        linkLabel: "See the engineering background",
+      },
+    },
+    {
       id: "ai",
       label: "Applied AI",
       summary:
         "Bringing intelligence into a product starts with context, boundaries, and a useful experience.",
       items: [
-        "Python",
-        "RAG",
         "LangChain",
         "LangGraph",
-        "Model fine-tuning",
-        "AI agents",
-        "Tool calling",
+        "RAG",
         "MCP",
-        "LLM integration",
-        "AI-assisted development",
-        "Claude agent workflows",
+        "LLM",
+        "Model fine-tuning",
+        "Multi-agent systems",
       ],
       evidence: {
         title: "Grounded answers. Faster delivery.",
@@ -123,20 +133,6 @@ export const sitecore = {
           "A document-grounded RAG chatbot, AI-powered CDD document processing, and coordinated Claude workflows used to deliver Loan Deferral Management in 14 days.",
         href: "#work",
         linkLabel: "Explore the AI work",
-      },
-    },
-    {
-      id: "languages",
-      label: "Languages",
-      summary:
-        "Different layers call for different tools. A language is a way to express a system clearly.",
-      items: ["TypeScript", "JavaScript (ES6+)", "Python", "Java"],
-      evidence: {
-        title: "Across the full stack.",
-        detail:
-          "A toolkit spanning typed web interfaces, backend services, and applied-AI development. Different parts of the system call for different ways of expressing intent.",
-        href: "#experience",
-        linkLabel: "See the engineering background",
       },
     },
     {
@@ -149,18 +145,9 @@ export const sitecore = {
         "Next.js",
         "Angular",
         "React Native",
-        "Redux",
-        "NgRx",
-        "RxJS",
-        "HTML5",
-        "CSS3",
-        "Sass / SCSS",
-        "Tailwind CSS",
-        "Material UI",
-        "Bootstrap",
+        "Redux Toolkit",
         "Responsive design",
         "Accessibility",
-        "SSR",
         "i18n",
       ],
       evidence: {
@@ -238,8 +225,7 @@ export const sitecore = {
       items: [
         "Playwright",
         "Jest",
-        "Performance optimization",
-        "SOLID principles",
+        "SOLID",
         "Design patterns",
         "Agile / Scrum",
         "Jira",

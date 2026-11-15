@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { sitecore } from "../data/sitecore";
 
-const icons = [Workflow, Braces, Code2, Network, Database, Cloud, ShieldCheck];
+const icons = [Braces, Workflow, Code2, Network, Database, Cloud, ShieldCheck];
 
 export function HeroSkills() {
   return (

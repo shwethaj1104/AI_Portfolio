@@ -1,0 +1,5 @@
+node_modules
+dist
+public/projects/project_01/video/*.mov
+.DS_Store
+*.tsbuildinfo

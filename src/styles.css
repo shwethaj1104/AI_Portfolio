@@ -2338,7 +2338,7 @@ html[data-design="workspace"] {
   background: var(--bg);
   color: var(--text);
   border-radius: 20px;
-  width: min(920px, calc(100vw - 28px));
+  width: min(1120px, calc(100vw - 28px));
   max-height: 90dvh;
   padding: 0;
   overscroll-behavior: contain;
@@ -2348,12 +2348,9 @@ html[data-design="workspace"] {
   background: #152c3899;
   backdrop-filter: blur(9px);
 }
-.project-dialog[data-project="project_01"],
-.project-dialog[data-project="project_02"] {
-  width: min(1120px, calc(100vw - 28px));
-}
-.project-dialog[data-project="project_01"] .media-stage > img,
-.project-dialog[data-project="project_02"] .media-stage > img {
+/* Every project uses the same readable, uncropped screenshot treatment. */
+.project-dialog .media-stage > img,
+.project-dialog .media-image-link > img {
   height: auto;
 }
 .project-dialog article {
@@ -9420,3 +9417,30 @@ html[data-palette="royal-white"] .theme-orbit .hero-visual { --scene-primary: #4
  .career-chapter-top { align-items: flex-start; }
  .career-chapter .career-chapter-top h3 { font-size: 16px; }
 }
+
+/* Illustrative parallel review: three signals converge, wait for review, then continue. */
+.loan-agent-visual { width: min(100%, 420px); padding: 8px 12px; text-align: center; }
+.loan-agent-visual > svg { display: block; width: 100%; overflow: visible; }
+.loan-agent-visual rect { fill: var(--surface); stroke: var(--accent); stroke-opacity: .42; }
+.loan-agent-visual path, .loan-agent-visual circle { stroke: var(--accent); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.loan-agent-visual .loan-flow-lines path { stroke-opacity: .3; }
+.loan-agent-visual text { fill: var(--text); font: 10px "DM Sans", sans-serif; text-anchor: middle; stroke: none; }
+.loan-flow-caption { display: block; color: var(--muted); font: 10px/1.5 var(--mono); letter-spacing: .08em; margin-top: 4px; }
+.loan-agent-visual .loan-signal { fill: var(--accent); stroke: none; opacity: 0; offset-distance: 0%; }
+.signal-input { offset-path: path('M54 100H92'); }
+.signal-top { offset-path: path('M148 100C166 100 162 42 184 42H242C265 42 256 100 278 100'); }
+.signal-middle { offset-path: path('M148 100H278'); }
+.signal-bottom { offset-path: path('M148 100C166 100 162 158 184 158H242C265 158 256 100 278 100'); }
+.signal-output { offset-path: path('M330 100H352'); }
+@media (prefers-reduced-motion: no-preference) {
+  .art-visible .loan-signals .signal-input { animation: loan-input 8s linear infinite; }
+  .art-visible .loan-signals .signal-top,
+  .art-visible .loan-signals .signal-middle,
+  .art-visible .loan-signals .signal-bottom { animation: loan-parallel 8s linear infinite; }
+  .art-visible .loan-signals .signal-output { animation: loan-output 8s linear infinite; }
+  .art-visible .loan-approval rect { animation: loan-checkpoint 8s ease-in-out infinite; }
+}
+@keyframes loan-input { 0% {opacity:0;offset-distance:0%} 5%{opacity:1} 20%{opacity:1;offset-distance:100%} 21%,100%{opacity:0;offset-distance:100%} }
+@keyframes loan-parallel { 0%,22%{opacity:0;offset-distance:0%} 25%{opacity:1} 58%{opacity:1;offset-distance:100%} 60%,100%{opacity:0;offset-distance:100%} }
+@keyframes loan-checkpoint { 0%,58%,88%,100%{fill:var(--surface);stroke-opacity:.42} 65%,78%{fill:color-mix(in srgb,var(--accent) 20%,var(--surface));stroke-opacity:1} }
+@keyframes loan-output { 0%,79%{opacity:0;offset-distance:0%} 80%{opacity:1} 92%{opacity:1;offset-distance:100%} 94%,100%{opacity:0;offset-distance:100%} }

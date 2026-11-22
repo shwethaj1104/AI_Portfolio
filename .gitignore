@@ -2,3 +2,6 @@ node_modules/
 dist/
 *.local
 .DS_Store
+
+# Keep original recording locally; publish the compressed demo.
+/public/projects/project_03/video/*.mov

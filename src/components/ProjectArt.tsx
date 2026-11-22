@@ -72,14 +72,64 @@ export function ProjectArt({
           <span>BASE → ADAPTED</span>
         </div>
       ) : (
-        <div className="agent-visual">
-          <span className="agent-node node-plan">Plan</span>
-          <span className="agent-node node-research">Research</span>
-          <span className="agent-node node-review">Review</span>
-          <span className="agent-node node-eval">Evaluate</span>
-          <svg viewBox="0 0 300 150" aria-hidden="true">
-            <path d="M150 30 L55 80 L150 130 L245 80 Z M150 30 V130" />
+        <div className="loan-agent-visual" aria-hidden="true">
+          <svg viewBox="0 0 400 200" fill="none" focusable="false">
+            <g className="loan-flow-lines">
+              <path d="M54 100H92M148 100C166 100 162 42 184 42M148 100H184M148 100C166 100 162 158 184 158M242 42C265 42 256 100 278 100M242 100H278M242 158C265 158 256 100 278 100M330 100H352" />
+            </g>
+            <g className="loan-input">
+              <rect x="8" y="78" width="46" height="44" rx="10" />
+              <path d="M22 91h18M22 99h18M22 107h11" />
+              <text x="31" y="140">
+                Application
+              </text>
+            </g>
+            <g className="loan-supervisor">
+              <rect x="92" y="76" width="56" height="48" rx="12" />
+              <circle cx="120" cy="92" r="5" />
+              <path d="M109 110v-3a11 8 0 0 1 22 0v3" />
+              <text x="120" y="142">
+                Supervisor
+              </text>
+            </g>
+            {[42, 100, 158].map((y, i) => (
+              <g className={`loan-specialist specialist-${i}`} key={y}>
+                <rect x="184" y={y - 19} width="58" height="38" rx="9" />
+                <circle cx="199" cy={y} r="4" />
+                <path d={`M210 ${y - 4}h20M210 ${y + 4}h14`} />
+                <text x="213" y={y + 32}>
+                  Specialist {i + 1}
+                </text>
+              </g>
+            ))}
+            <g className="loan-approval">
+              <rect x="278" y="76" width="52" height="48" rx="12" />
+              <path d="m291 99 9 9 16-18" />
+              <text x="304" y="143">
+                Human
+              </text>
+              <text x="304" y="156">
+                approval
+              </text>
+            </g>
+            <g className="loan-assessment">
+              <rect x="352" y="78" width="40" height="44" rx="9" />
+              <path d="M362 91h20M362 100h20M362 109h12" />
+              <text x="369" y="141">
+                Assessment
+              </text>
+            </g>
+            <g className="loan-signals">
+              <circle className="loan-signal signal-input" r="3" />
+              <circle className="loan-signal signal-top" r="3" />
+              <circle className="loan-signal signal-middle" r="3" />
+              <circle className="loan-signal signal-bottom" r="3" />
+              <circle className="loan-signal signal-output" r="3" />
+            </g>
           </svg>
+          <span className="loan-flow-caption">
+            PARALLEL REVIEW · HUMAN CHECKPOINT
+          </span>
         </div>
       )}
     </div>

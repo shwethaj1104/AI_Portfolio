@@ -448,6 +448,72 @@ export const sitecore = {
       githubUrl: "https://github.com/shwethaj1104/Multi_Agents_App",
       liveUrl: "",
     },
+    {
+      id: "project_04",
+      number: "04",
+      title: "ResolveDesk — banking disputes with accountable AI.",
+      shortTitle: "MCP Banking Dispute Management",
+      modalTitle: "ResolveDesk — AI-Assisted Banking Disputes",
+      category: "Custom MCP Banking Tools",
+      verified: true,
+      status: "Implemented · screenshots available",
+      summary:
+        "AI-assisted banking dispute investigation using custom MCP tools, bank review and customer consent.",
+      description:
+        "ResolveDesk is an AI-assisted banking dispute management application. Customers submit transaction disputes, and AI investigates using custom MCP banking tools. Bank reviewers validate findings before requesting customer consent, with case history tracking each step through resolution.",
+      tags: [
+        "Python",
+        "FastAPI",
+        "React",
+        "TypeScript",
+        "Vite",
+        "LangGraph",
+        "Model Context Protocol (MCP)",
+      ],
+      pipeline: [
+        "Transaction dispute",
+        "MCP tool investigation",
+        "Bank reviewer validation",
+        "Customer consent",
+        "Resolution & case history",
+      ],
+      highlights: [
+        "Custom MCP banking tool integration",
+        "LangGraph workflows with human checkpoints",
+        "AI investigation with evidence validation",
+        "React dashboards with TypeScript interfaces",
+      ],
+      evaluation: [],
+      media: [
+        {
+          src: "/projects/project_04/1. Dashboard.png",
+          alt: "ResolveDesk — Dashboard",
+        },
+        {
+          src: "/projects/project_04/2. AI review in progress.png",
+          alt: "ResolveDesk — AI review in progress",
+        },
+        {
+          src: "/projects/project_04/3. Under bank Review .png",
+          alt: "ResolveDesk — Under bank Review",
+        },
+        {
+          src: "/projects/project_04/4. Awaiting Customer consent.png",
+          alt: "ResolveDesk — Awaiting Customer consent",
+        },
+        {
+          src: "/projects/project_04/5. Closed.png",
+          alt: "ResolveDesk — Closed",
+        },
+        {
+          src: "/projects/project_04/6. Tools.png",
+          alt: "ResolveDesk — Tools",
+        },
+      ],
+      videoUrl: "",
+      githubUrl: "https://github.com/shwethaj1104/MCP",
+      liveUrl: "",
+    },
   ] satisfies Project[],
   person: {
     sectionTitle: "Education & recognition.",

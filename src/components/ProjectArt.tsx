@@ -71,6 +71,39 @@ export function ProjectArt({
           <div className="tuning-line" />
           <span>BASE → ADAPTED</span>
         </div>
+      ) : project.number === "04" ? (
+        <div className="mcp-orbit-visual" aria-hidden="true">
+          <svg viewBox="0 0 340 172" fill="none" focusable="false">
+            <circle className="mcp-halo" cx="170" cy="83" r="60" />
+            <circle className="mcp-halo inner" cx="170" cy="83" r="46" />
+            <path className="mcp-link" d="M78 83H135M205 83H262" />
+            <g className="mcp-document">
+              <rect x="38" y="56" width="40" height="54" rx="9" />
+              <path d="M49 72h18M49 81h18M49 90h11" />
+            </g>
+            <g className="mcp-hub">
+              <rect x="135" y="48" width="70" height="70" rx="23" />
+              <text x="170" y="90" textAnchor="middle">
+                MCP
+              </text>
+              <circle cx="150" cy="62" r="2" />
+              <circle cx="190" cy="104" r="2" />
+            </g>
+            <g className="mcp-review">
+              <rect x="262" y="62" width="42" height="42" rx="14" />
+              <path d="m273 83 7 7 13-15" />
+            </g>
+            <circle className="mcp-packet packet-to-hub" r="3" />
+            <circle className="mcp-packet packet-to-review" r="3" />
+            <g className="mcp-satellites">
+              <circle cx="170" cy="23" r="4" />
+              <circle cx="170" cy="143" r="4" />
+            </g>
+          </svg>
+          <span className="mcp-art-caption">
+            Connected tools. Reviewed decisions.
+          </span>
+        </div>
       ) : (
         <div className="loan-agent-visual" aria-hidden="true">
           <svg viewBox="0 0 400 200" fill="none" focusable="false">

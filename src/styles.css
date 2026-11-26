@@ -9444,3 +9444,27 @@ html[data-palette="royal-white"] .theme-orbit .hero-visual { --scene-primary: #4
 @keyframes loan-parallel { 0%,22%{opacity:0;offset-distance:0%} 25%{opacity:1} 58%{opacity:1;offset-distance:100%} 60%,100%{opacity:0;offset-distance:100%} }
 @keyframes loan-checkpoint { 0%,58%,88%,100%{fill:var(--surface);stroke-opacity:.42} 65%,78%{fill:color-mix(in srgb,var(--accent) 20%,var(--surface));stroke-opacity:1} }
 @keyframes loan-output { 0%,79%{opacity:0;offset-distance:0%} 80%{opacity:1} 92%{opacity:1;offset-distance:100%} 94%,100%{opacity:0;offset-distance:100%} }
+
+/* A compact MCP connection illustration keeps the card free of repeated feature copy. */
+.mcp-orbit-visual { width: min(100%, 360px); padding: 8px 16px 16px; text-align: center; color: var(--accent); }
+.mcp-orbit-visual svg { display: block; width: 100%; overflow: visible; }
+.mcp-orbit-visual rect { fill: var(--surface); stroke: currentColor; stroke-opacity: .4; }
+.mcp-orbit-visual path { stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.mcp-orbit-visual .mcp-hub rect { fill: color-mix(in srgb,var(--accent) 10%,var(--surface)); stroke-opacity: .65; }
+.mcp-hub text { fill: currentColor; font: 600 19px var(--display); }
+.mcp-hub circle, .mcp-satellites circle, .mcp-packet { fill: currentColor; }
+.mcp-orbit-visual .mcp-link { stroke-opacity: .25; stroke-dasharray: 3 5; }
+.mcp-orbit-visual .mcp-halo { stroke: currentColor; stroke-opacity: .12; }
+.mcp-orbit-visual .mcp-halo.inner { stroke-opacity: .07; }
+.mcp-art-caption { display: block; color: var(--muted); font-size: 12px; margin-top: -6px; }
+.mcp-packet { opacity: 0; offset-distance: 0%; }
+.packet-to-hub { offset-path: path('M78 83H135'); }
+.packet-to-review { offset-path: path('M205 83H262'); }
+.mcp-satellites { transform-origin: 170px 83px; }
+@media (prefers-reduced-motion: no-preference) {
+ .art-visible .packet-to-hub { animation: mcp-connect 5s linear infinite; }
+ .art-visible .packet-to-review { animation: mcp-connect 5s linear -2.5s infinite; }
+ .art-visible .mcp-satellites { animation: mcp-orbit 24s linear infinite; }
+}
+@keyframes mcp-connect { 0% {opacity:0;offset-distance:0%} 8%{opacity:1} 40%{opacity:1;offset-distance:100%} 45%,100%{opacity:0;offset-distance:100%} }
+@keyframes mcp-orbit { to { transform: rotate(360deg); } }

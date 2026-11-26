@@ -54,14 +54,16 @@ export function ProjectCard({
               ))}
             </ul>
           </div>
-          <div>
-            <h4>{sitecore.labels.projectEvaluation}</h4>
-            <ul className="project-evaluation-list">
-              {project.evaluation.map((dimension) => (
-                <li key={dimension}>{dimension}</li>
-              ))}
-            </ul>
-          </div>
+          {project.evaluation.length > 0 && (
+            <div>
+              <h4>{sitecore.labels.projectEvaluation}</h4>
+              <ul className="project-evaluation-list">
+                {project.evaluation.map((dimension) => (
+                  <li key={dimension}>{dimension}</li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
         <Tags items={project.tags} />
       </div>
